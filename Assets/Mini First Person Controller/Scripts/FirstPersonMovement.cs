@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using JetBrains.Annotations;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -7,6 +8,8 @@ public class FirstPersonMovement : MonoBehaviour
     public float speed = 5;
     public EnemyAI Enemy;
 
+    public delegate void Moved(Vector3 position);//noninvokable
+    public Moved UpdateEnemyAI;
     [Header("Running")]
     public bool canRun = true;
     public bool IsRunning { get; private set; }
@@ -16,9 +19,6 @@ public class FirstPersonMovement : MonoBehaviour
     Rigidbody rigidbody;
     /// <summary> Functions to override movement speed. Will use the last added override. </summary>
     public List<System.Func<float>> speedOverrides = new List<System.Func<float>>();
-
-    private readonly Vector2 zeroVelocity = new Vector2(0, 0);
-
     void Awake()
     {
         // Get the rigidbody on this.
@@ -39,9 +39,11 @@ public class FirstPersonMovement : MonoBehaviour
 
         // Get targetVelocity from input.
         Vector2 targetVelocity = new Vector2( Input.GetAxis("Horizontal") * targetMovingSpeed, Input.GetAxis("Vertical") * targetMovingSpeed);
-        if(targetVelocity != zeroVelocity)
+        
+        if (targetVelocity !=  Vector2.zero)
         {
-            Enemy.SetDestination(this.transform.position);
+            if (UpdateEnemyAI!=null)
+            UpdateEnemyAI(this.transform.position);
         }
 
         // Apply movement.
