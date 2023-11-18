@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: -7949136978043226412, guid: fda0cd4242dc3f7438fc750f379b7a6c,
         type: 3}
       propertyPath: m_Name
-      value: Haunted House (1)
+      value: Haunted House
       objectReference: {fileID: 0}
     - target: {fileID: -3124914424127336872, guid: fda0cd4242dc3f7438fc750f379b7a6c,
         type: 3}
@@ -70,3 +70,23 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 9199261849990390558, guid: fda0cd4242dc3f7438fc750f379b7a6c,
     type: 3}
+--- !u!1 &4562303666413818480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3378789902616501986, guid: fda0cd4242dc3f7438fc750f379b7a6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7947920402428408686}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1050659627
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4562303666413818480}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 9181634538189940731, guid: fda0cd4242dc3f7438fc750f379b7a6c, type: 3}
