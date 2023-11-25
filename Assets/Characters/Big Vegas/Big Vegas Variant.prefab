@@ -1,5 +1,95 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5377833316234396197
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4623060689839559856}
+    m_Modifications:
+    - target: {fileID: -5609321221556402741, guid: 0efa25eab9537c545843da7df59ca644,
+        type: 3}
+      propertyPath: m_Name
+      value: Beer Bottle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146681718063874739, guid: 0efa25eab9537c545843da7df59ca644,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146681718063874739, guid: 0efa25eab9537c545843da7df59ca644,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.0035
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146681718063874739, guid: 0efa25eab9537c545843da7df59ca644,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0035
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146681718063874739, guid: 0efa25eab9537c545843da7df59ca644,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.0035
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146681718063874739, guid: 0efa25eab9537c545843da7df59ca644,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.184
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146681718063874739, guid: 0efa25eab9537c545843da7df59ca644,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.179
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146681718063874739, guid: 0efa25eab9537c545843da7df59ca644,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.084
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146681718063874739, guid: 0efa25eab9537c545843da7df59ca644,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146681718063874739, guid: 0efa25eab9537c545843da7df59ca644,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146681718063874739, guid: 0efa25eab9537c545843da7df59ca644,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146681718063874739, guid: 0efa25eab9537c545843da7df59ca644,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146681718063874739, guid: 0efa25eab9537c545843da7df59ca644,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146681718063874739, guid: 0efa25eab9537c545843da7df59ca644,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146681718063874739, guid: 0efa25eab9537c545843da7df59ca644,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146681718063874739, guid: 0efa25eab9537c545843da7df59ca644,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 9199261849990390558, guid: 0efa25eab9537c545843da7df59ca644,
+    type: 3}
 --- !u!1001 &6457535135591611056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -205,6 +295,20 @@ CapsuleCollider:
   m_Height: 1.8855321
   m_Direction: 1
   m_Center: {x: 0, y: 0.93294585, z: 0}
+--- !u!136 &26375205232315993
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6150980512125244969}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.8855321
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.93294585, z: 0}
 --- !u!95 &6457535136725989876
 Animator:
   serializedVersion: 5
@@ -238,7 +342,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f9b7af654deef4439da7c3980b2c2bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BigVegas: {fileID: 6457535136725989880}
+  Enemy: {fileID: 6457535136725989880}
+  Player: {fileID: 0}
+  stoppingDistance: 3
 --- !u!195 &6457535136725989880
 NavMeshAgent:
   m_ObjectHideFlags: 0
