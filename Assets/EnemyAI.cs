@@ -1,29 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    public NavMeshAgent Enemy;
-    public GameObject Player;
+    NavMeshAgent enemy;
+    Animator animator;
+    public GameObject player;
 
-    public float stoppingDistance = 1;
-    // Start is called before the first frame update
     void Start()
     {
-        if(Player)
+        enemy = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
+        if (player)
         {
-        Player.GetComponent<FirstPersonMovement>().UpdateEnemyAI += SetDestination; //call delegate from Player
-        }
-        
-        if(Enemy)
-        {
-            Enemy.stoppingDistance = stoppingDistance;
+            player.GetComponent<FirstPersonMovement>().UpdateEnemyAI += SetDestination; //call delegate from Player
         }
     }
+
+    private void Update()
+    {
+        animator.SetFloat("Speed", enemy.velocity.magnitude / enemy.speed);
+    }
+
     public void SetDestination(Vector3 position)
     {
-        Enemy.SetDestination(position);
+        enemy.SetDestination(position);
     }
 }

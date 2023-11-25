@@ -694,7 +694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   Enemy: {fileID: 0}
-  canRun: 1
+  canRun: 0
   runSpeed: 9
   runningKey: 304
 --- !u!114 &114497868231759342

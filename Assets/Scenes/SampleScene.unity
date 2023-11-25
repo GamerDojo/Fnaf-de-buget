@@ -841,6 +841,16 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 1558110849}
+    - target: {fileID: 6457535136725989879, guid: 1707758702201f14f89abf654929b8c9,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1558110849}
+    - target: {fileID: 6457535136725989880, guid: 1707758702201f14f89abf654929b8c9,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6780024666768739475, guid: 1707758702201f14f89abf654929b8c9,
         type: 3}
       propertyPath: m_RootOrder
