@@ -12,8 +12,8 @@ public class EnemyAI : MonoBehaviour
     {
         enemy = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
-        if (player)
-        {
+        if (player) 
+        {   
             player.GetComponent<FirstPersonMovement>().UpdateEnemyAI += SetDestination; //call delegate from Player
         }
     }
